@@ -19,41 +19,56 @@ class ProductController extends Controller
     }
     public function store()
     {
-        $product = new product();
-
-        $product->productName = request('title');
-        $product->productDesc = request('description');
-        $product->imgpath = request('imgpath');
-        $product->stockAvailable = request('stockAvailable');
+        request()->validate([
+            'title' => ['required', 'min:6', 'max:255'],
+            'description' => ['required', 'min:10'],
+            'imgpath' => ['required', 'min:3'],
+            'stockAvailable' => 'required'
+        ]);
+        product::create([
+            'productName' => request('title'),
+            'productDesc' => request('description'),
+            'imgpath' => request('imgpath'),
+            'stockAvailable' => request('stockAvailable')
+        ]);
         
 
-        $product->save();
         return redirect('/products');
     }
 
-    public function edit($id)
+    public function edit(product $product)
     {
-        $product = product::findOrFail($id);
         return view('pages.stock.edit', compact('product'));
     }
 
-    public function update($id)
+    public function update(product $product)
     {
-       $product = product::findOrFail($id);
+        request()->validate([
+            'title' => ['required', 'min:6', 'max:255'],
+            'description' => ['required', 'min:10'],
+            'imgpath' => ['required', 'min:3'],
+            'stockAvailable' => 'required'
+        ]);
+        $product->update([
+            'productName' => request('title'),
+            'productDesc' => request('description'),
+            'imgpath' => request('imgpath'),
+            'stockAvailable' => request('stockAvailable')
+        ]);
 
-       $product->productName = request('title');
-       $product->productDesc = request('description');
-       $product->imgpath = request('imgpath');
-       $product->stockAvailable = request('stockAvailable');
-       $product->save();
 
        return redirect('/products');
     }
 
-    public function destroy($id)
+    public function destroy(product $product)
     {
-        product::findOrFail($id)->delete();
+        $product->delete();
         return redirect('/products');
 
+    }
+
+    public function show(product $product)
+    {   
+        return view('pages.stock.show', compact('product'));
     }
 }

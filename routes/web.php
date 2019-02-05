@@ -12,11 +12,6 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::resource('products', 'ProductController');
 Route::get('/contact', 'PagesController@contact');
+Route::resource('products', 'ProductController');
 
-/* 
-Route::get('/stock', 'ProductController@stock');
-Route::post('/stock', 'ProductController@store');
-Route::get('/stock/create', 'ProductController@create');
-*/
