@@ -70,50 +70,44 @@
 
         <!--footer starts from here-->
         <footer class="footer">
-        <div class="container bottom_border">
-        <div class="row">
-        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-        <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-        <!--headin5_amrc-->
-        <p class="mb10">A webapp built for a cs50 final project</p>
-        <p><i class="fa fa-location-arrow"></i>Cornwall, England UK </p>
-        <p><i class="fa fa-phone"></i>  +4407711286429  </p>
-        <p><i class="fa fa fa-envelope"></i> <a id="mail" href="/contact">montydavidhollings@gmail.com</a></p>
+          <div class="container bottom_border">
+            <div class="row">
+              <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                <!--headin5_amrc-->
+                <p class="mb10">A webapp built for a cs50 final project</p>
+                <p><i class="fa fa-location-arrow"></i>Cornwall, England UK </p>
+                <p><i class="fa fa-phone"></i>  +4407711286429  </p>
+                <p><i class="fa fa fa-envelope"></i> <a id="mail" href="/contact">montydavidhollings@gmail.com</a></p>
+              </div>
+
+              <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                  <li><a href="/products">Stock</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Register</a></li>
+                  <li><a href="/tos">Terms and conditions #TODO</a></li>
+                  <li><a href="/privacy">Privacy Policy #TODO</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+              </div>
 
 
-        </div>
+              <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <!--headin5_amrc ends here-->
 
-
-
-
-
-        <div class=" col-sm-4 col-md  col-6 col">
-        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-        <!--headin5_amrc-->
-        <ul class="footer_ul_amrc">
-        <li><a href="/stock">Stock #TODO</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/tos">Terms and conditions #TODO</a></li>
-        <li><a href="/privacy">Privacy Policy #TODO</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        </ul>
-        <!--footer_ul_amrc ends here-->
-        </div>
-
-
-        <div class=" col-sm-4 col-md  col-12 col">
-        <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-        <!--headin5_amrc ends here-->
-
-        <ul class="footer_ul2_amrc">
-        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Example tweet<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
-        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Trump man bad!<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
-        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>water prices reach record high<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
-        </ul>
-        <!--footer_ul2_amrc ends here-->
-        </div>
-        </div>
+                <ul class="footer_ul2_amrc">
+                  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Example tweet<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
+                  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Trump man bad!<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
+                  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>water prices reach record high<a href="https://sd.keepcalm-o-matic.co.uk/i-w600/why-are-you-here-5.jpg">https://www.lipsum.com/</a></p></li>
+                </ul>
+                <!--footer_ul2_amrc ends here-->
+              </div>
+          </div>
         </div>
 
 
@@ -133,5 +127,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        </footer>
     </body>
 </html>

@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="form-group">
-                <label class="label" for="stockAvailable">Image Path</label>
+                <label class="label" for="stockAvailable">Stock Available</label>
                 
                 <div class="control">
                     <input type="number" class="form-control {{ $errors->has('stockAvailable') ? ' alert-danger' : '' }}" name="stockAvailable" placeholder="Stock Available" value="{{ $product->stockAvailable }}">

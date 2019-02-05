@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('/contact', 'PagesController@contact');
+Route::get('/', 'HomeController@home');
+
+Route::get('/contact', 'HomeController@contact');
+
 Route::resource('products', 'ProductController');
 
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@home')->name('home');
