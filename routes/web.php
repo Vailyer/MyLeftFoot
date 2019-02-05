@@ -13,10 +13,9 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('/contact', 'HomeController@contact');
+Route::get('/contact', 'HomeController@contact')->middleware('verified');
 
-Route::resource('products', 'ProductController');
+Route::resource('products', 'ProductController')->middleware('verified');
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
-Route::get('/home', 'HomeController@home')->name('home');
