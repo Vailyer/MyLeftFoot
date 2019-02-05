@@ -33,17 +33,27 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        $product = product::find($id);
+        $product = product::findOrFail($id);
         return view('pages.stock.edit', compact('product'));
     }
 
-    public function update()
+    public function update($id)
     {
-        dd(request()->all());
+       $product = product::findOrFail($id);
+
+       $product->productName = request('title');
+       $product->productDesc = request('description');
+       $product->imgpath = request('imgpath');
+       $product->stockAvailable = request('stockAvailable');
+       $product->save();
+
+       return redirect('/products');
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        product::findOrFail($id)->delete();
+        return redirect('/products');
 
     }
 }

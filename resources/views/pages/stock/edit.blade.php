@@ -4,8 +4,8 @@
     <h1 class="title">Edit Project</h1>
 
     <form method="POST" action="/products/{{ $product->id }}">
-        {{ method_field('PATCH') }}
-        {{ csrf_field() }}
+        @csrf
+        @method('PATCH')
         <div class="field">
             <label class="label" for="title">Title</label>
 
@@ -39,6 +39,15 @@
             <div class="control">
                 <button type="submit" class="button is-link">Update Product</button>
             </div>
+        </div>
+    </form>
+    <form method="POST" action="/products/{{ $product->id }}">
+        @csrf
+        @method('DELETE')
+        <div class="field">
+                <div class="control">
+                    <button type="submit" class="button">Delete Product</button>
+                </div>
         </div>
     </form>
 

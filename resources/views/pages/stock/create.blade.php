@@ -2,7 +2,7 @@
 @section('content')
 <h1>Create A new product</h1>
 <form method="POST" action="/products"> 
-    {{ csrf_field() }}         
+    @csrf        
     <div>
         <input type="text" name="title" placeholder="Product Title">
     </div>
