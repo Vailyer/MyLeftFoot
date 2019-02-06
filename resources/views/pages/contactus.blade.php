@@ -36,21 +36,25 @@
               <h1>Contact Us</h1>
             </div>
     </div>
-
+    
     <div class="container contact-form">
         <div class="contact-image">
             <img src="img/shoe.png" alt="rocket_contact"/>
         </div>
-        <form method="post">
+        <form method="post" action="{{ route('contactus.store') }}">
+            @csrf
             <h3>Drop Us a Message</h3>
            <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" required/>
+                        <input type="text" name="name" class="form-control {{ $errors->has('name') ? ' alert-danger' : '' }}" placeholder="Your Name *" value="" required/>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" required/>
+                        <input type="email" name="email" class="form-control {{ $errors->has('email') ? ' alert-danger' : '' }}" placeholder="Your Email *" value="" required/>
                     </div>
+                    <div class="form-group">
+                            <input type="text" name="subject" class="form-control {{ $errors->has('subject') ? ' alert-danger' : '' }}" placeholder="Subject *" value="" required/>
+                        </div>
                     <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="Send Message"/>
                     </div>
@@ -62,5 +66,16 @@
                 </div>
             </div>
         </form>
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+    @if (session('warning'))
+        <div class="alert alert-warning">
+            {{ session('warning') }}
+        </div>
+    @endif
+    <div class="container">
 </div>
 @endsection

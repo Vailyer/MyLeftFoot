@@ -13,9 +13,10 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('/contact', 'HomeController@contact')->middleware('verified');
+Route::get('contact-us', 'ContactUSController@contactUS');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
 
 Route::resource('products', 'ProductController')->middleware('verified');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 

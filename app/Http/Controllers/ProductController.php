@@ -20,7 +20,7 @@ class ProductController extends Controller
     public function store()
     {
         request()->validate([
-            'title' => ['required', 'min:6', 'max:255'],
+            'title' => ['required', 'min:10', 'max:255'],
             'description' => ['required', 'min:10'],
             'imgpath' => ['required', 'min:3'],
             'stockAvailable' => 'required'

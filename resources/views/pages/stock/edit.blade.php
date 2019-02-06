@@ -10,14 +10,14 @@
             <label class="label" for="title">Title</label>
 
             <div class="control">
-                <input type="text" class="form-control {{ $errors->has('title') ? ' alert-danger' : '' }} " name="title" placeholder="Title" value="{{ $product->productName }}">
+                <input type="text" class="form-control {{ $errors->has('title') ? ' alert-danger' : '' }} " name="title" placeholder="Title" value="{{ $product->productName }}" required>
             </div>
         </div>
         <div class="form-group">
             <label class="title" for="description">Description</label>
 
             <div class="control">
-                <textarea name="description" class="form-control {{ $errors->has('description') ? ' alert-danger' : '' }}">{{ $product->productDesc }}</textarea>
+                <textarea name="description" class="form-control {{ $errors->has('description') ? ' alert-danger' : '' }}" required>{{ $product->productDesc }} </textarea>
             </div>
 
         </div>
@@ -25,14 +25,14 @@
             <label class="label" for="imgpath">Image Path</label>
 
             <div class="control">
-                <input type="text" class="form-control {{ $errors->has('imgpath') ? ' alert-danger' : '' }}" name="imgpath" placeholder="Image Path" value="{{ $product->imgpath }}">
+                <input type="text" class="form-control {{ $errors->has('imgpath') ? ' alert-danger' : '' }}" name="imgpath" placeholder="Image Path" value="{{ $product->imgpath }}" required>
             </div>
         </div>
         <div class="form-group">
                 <label class="label" for="stockAvailable">Stock Available</label>
                 
                 <div class="control">
-                    <input type="number" class="form-control {{ $errors->has('stockAvailable') ? ' alert-danger' : '' }}" name="stockAvailable" placeholder="Stock Available" value="{{ $product->stockAvailable }}">
+                    <input type="number" class="form-control {{ $errors->has('stockAvailable') ? ' alert-danger' : '' }}" name="stockAvailable" placeholder="Stock Available" value="{{ $product->stockAvailable }}" required>
                 </div>
         </div>
         <div class="form-group">

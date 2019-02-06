@@ -1,4 +1,87 @@
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+.single {
+    padding: 30px 15px;
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0; }
+.single h3.side-title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase; }
+.single h3.side-title:after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: #ff173c;
+    display: block;
+    margin-top: 6px; }
+    
+.single ul {
+    margin-bottom: 0; }
+.single li a {
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 40px;
+    display: block;
+    text-decoration: none; }
+.single li a:hover {
+    color: #ff173c; }
+.single li:last-child a {
+    border-bottom: 0; }
+
+.signinbody{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+ 
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+position: relative;
+box-sizing: border-box;
+height: auto;
+padding: 10px;
+font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 
 .contact-form{
     background: #fff;

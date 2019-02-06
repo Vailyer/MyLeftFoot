@@ -21,7 +21,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                        <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                        <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                         <div class="price-wrap h5">
                             <span class="price-new">£50 - £250</span>
                         </div>
@@ -41,7 +41,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">£ 75 +</span>
                             </div>
@@ -60,7 +60,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">£ 75 +</span>
                             </div>
@@ -79,7 +79,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">View Collection</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">£ 75 +</span>
                             </div>
@@ -98,7 +98,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">View Collection</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">£ 75 +</span>
                             </div>
@@ -117,7 +117,7 @@
                             </div>
                     </figcaption>
                     <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">View Collection</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Find my odd shoe!</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">£150+</span>
                             </div>

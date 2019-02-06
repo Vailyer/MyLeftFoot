@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @yield('title')
     </head>
-    <body>
+    <body class="@yield('bodyType')">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">MyLeftFoot</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                   <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/products">Stock</a>
+                  <a class="nav-link" href="/products">Marketplace</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
