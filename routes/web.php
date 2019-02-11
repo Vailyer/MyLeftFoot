@@ -13,8 +13,8 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('contact-us', 'ContactUSController@contactUS');
-Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
+Route::get('contact', 'ContactController@showContact');
+Route::post('contact', 'ContactController@sendMail');
 
 Route::resource('products', 'ProductController')->middleware('verified');
 

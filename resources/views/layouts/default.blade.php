@@ -4,7 +4,8 @@
     <head>
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +13,21 @@
     </head>
     <body class="@yield('bodyType')">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">MyLeftFoot</a>
+            <a class="navbar-brand" href="/">MyLeftFoot</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                <li class="nav-item {{ Request::is('products') ? 'active' : '' }}">
+                  <a class="nav-link" href="/products">Mens</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/products">Marketplace</a>
+                <li class="nav-item {{ Request::is('products') ? 'active' : '' }}">
+                  <a class="nav-link" href="/products">Womens</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     My Account
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,17 +38,17 @@
                     <a class="dropdown-item" href="/settings">Settings</a>
                     <div class="dropdown-divider"></div>
                   </div>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="/contact">About/Contact Us</a>
+                  <li class="nav-item ">
+                      <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">About/Contact Us</a>
                   </li>
               </ul>
               @if (Auth::guest())
 
               <div class="nav-item">
-                    <a class="nav-link na" href="/register" > Register </a>
+                    <a class="nav-link na " href="/register" ><i class="fas fa-user-plus"></i>Register </a>
               </div>
               <div>
-                    <a class="nav-link na" href="/login" > Login </a>
+                    <a class="nav-link na" href="/login" > <i class="fas fa-sign-in-alt"></i>Login </a>
               </div>
               @endif
               @if (Auth::check())
@@ -60,10 +61,6 @@
                             </form>
                 </div>
               @endif
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
             </div>
         </nav>
         @yield('content')

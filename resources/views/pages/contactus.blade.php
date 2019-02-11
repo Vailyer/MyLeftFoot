@@ -39,33 +39,55 @@
     
     <div class="container contact-form">
         <div class="contact-image">
-            <img src="img/shoe.png" alt="rocket_contact"/>
+            <img id="shoe" src="img/shoe.png" alt="rocket_contact"/>
         </div>
-        <form method="post" action="{{ route('contactus.store') }}">
+        <form method="post" action="#">
             @csrf
             <h3>Drop Us a Message</h3>
            <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control {{ $errors->has('name') ? ' alert-danger' : '' }}" placeholder="Your Name *" value="" required/>
+                        <input type="text" name="name" class="form-control {{ $errors->has('name') ? ' alert-danger' : '' }}" placeholder="Your Name *" value="" />
                     </div>
+                    @if ($errors->has('name'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                    @endif
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control {{ $errors->has('email') ? ' alert-danger' : '' }}" placeholder="Your Email *" value="" required/>
+                        <input type="email" name="email" class="form-control {{ $errors->has('email') ? ' alert-danger' : '' }}" placeholder="Your Email *" value=""/>
                     </div>
+                    @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                    @endif
                     <div class="form-group">
-                            <input type="text" name="subject" class="form-control {{ $errors->has('subject') ? ' alert-danger' : '' }}" placeholder="Subject *" value="" required/>
-                        </div>
+                        <input type="text" name="subject" class="form-control {{ $errors->has('subject') ? ' alert-danger' : '' }}" placeholder="Subject *" value="" />
+                    </div>
+                    @if ($errors->has('subject'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('subject') }}</strong>
+                    </span>
+                    @endif
                     <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="Send Message"/>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <textarea required name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                        <textarea name="message" class="form-control {{ $errors->has('message') ? ' is-invalid' : '' }}" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
                     </div>
+                    @if ($errors->has('message'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('message') }}</strong>
+                    </span>
+                    @endif
                 </div>
             </div>
         </form>
+        
+    </div>  
         @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
