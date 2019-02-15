@@ -3,17 +3,6 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/products">Stock</a></li>
-                    <li class="breadcrumb-item"><a href="/products">Mens</a></li>
-                    <li class="breadcrumb-item active" aria-current="/products">Sneakers</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
             <div class="col-sm">
                     <div class="single category">
                         <h3 class="side-title">Search Category</h3>
@@ -32,8 +21,11 @@
                     </div>
             </div>
             <div class="col-md">
-              <h3 class ="text-center">Post Your Shoe!</h3>
-              <hr>
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <hr>
             </div>
             <div class="col-md">
               One of three columns

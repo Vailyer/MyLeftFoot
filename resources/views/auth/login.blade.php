@@ -8,7 +8,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @yield('title')
+        <title>My Left Foot: Login </title>
     </head>
     <body class="signinbody">
         <div class="container text-center loginform">
@@ -58,5 +58,5 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     </body>
-                
+</html>
 
