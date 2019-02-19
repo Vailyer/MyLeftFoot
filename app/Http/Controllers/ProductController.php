@@ -9,10 +9,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = product::all();
+        $products = product::paginate(6);
   
         return view('pages.stock.index', compact('products'));
     }
+
     public function create()
     {
         return view('/pages/stock/create');
@@ -23,13 +24,25 @@ class ProductController extends Controller
             'title' => ['required', 'min:10', 'max:255'],
             'description' => ['required', 'min:10'],
             'imgpath' => ['required', 'min:3'],
-            'stockAvailable' => 'required'
+            'price' => ['required', 'min:1', 'max:500'],
+            'LRselect' => ['required'],
+            'size' => ['required'],
+            'colour' => ['required', 'min:3'],
+            'brand' => ['required', 'min: 3'],
+            'style' => ['required']
+
         ]);
         product::create([
             'productName' => request('title'),
             'productDesc' => request('description'),
             'imgpath' => request('imgpath'),
-            'stockAvailable' => request('stockAvailable')
+            'price' => request('price'),
+            'foot' => request('LRselect'),
+            'size' => request('size'),
+            'colour' => request('colour'),
+            'brand' => request('brand'),
+            'style' => request('style'),
+            'userid' => auth()->user()->id
         ]);
         
 
@@ -44,16 +57,28 @@ class ProductController extends Controller
     public function update(product $product)
     {
         request()->validate([
-            'title' => ['required', 'min:6', 'max:255'],
+            'title' => ['required', 'min:10', 'max:255'],
             'description' => ['required', 'min:10'],
             'imgpath' => ['required', 'min:3'],
-            'stockAvailable' => 'required'
+            'price' => ['required', 'min:1', 'max:500'],
+            'LRselect' => ['required'],
+            'size' => ['required'],
+            'colour' => ['required', 'min:3'],
+            'brand' => ['required', 'min: 3'],
+            'style' => ['required']
+
         ]);
         $product->update([
             'productName' => request('title'),
             'productDesc' => request('description'),
             'imgpath' => request('imgpath'),
-            'stockAvailable' => request('stockAvailable')
+            'price' => request('price'),
+            'foot' => request('LRselect'),
+            'size' => request('size'),
+            'colour' => request('colour'),
+            'brand' => request('brand'),
+            'style' => request('style'),
+            'userid' => auth()->user()->id
         ]);
 
 

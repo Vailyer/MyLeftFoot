@@ -11,6 +11,37 @@
         @yield('title')
     </head>
     <body class="signinbody">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/getting-started">My Left Foot</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              @if (Auth::guest())
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Log In</a>
+              </li>
+              @endif
+              @if (Auth::check())
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/products') }}">Marketplace</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/my-account') }}">My Account</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
+              </li>
+              @endif
+            </ul>
+          </div>
+        </div>
+      </nav>
         @yield('content')
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>

@@ -17,9 +17,17 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('productName');
             $table->text('productDesc');
+            $table->integer('price');
             $table->string('imgpath');
-            $table->integer('stockAvailable');
+            $table->string('foot');
+            $table->integer('size');
+            $table->string('colour');
+            $table->string('brand');
+            $table->string('style');
+            $table->integer('userid')->unsigned();
+            $table->foreign('userid')->references('id')->on('users');
             $table->timestamps();
+
         });
     }
 

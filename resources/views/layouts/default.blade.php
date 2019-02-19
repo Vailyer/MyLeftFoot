@@ -31,10 +31,10 @@
               @endif
               @if (Auth::check())
               <li class="nav-item">
-                  <a class="nav-link" href="">Marketplace</a>
+                  <a class="nav-link" href="{{ url('/products') }}">Marketplace</a>
                 </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/myaccount') }}">My Account</a>
+                  <a class="nav-link" href="{{ url('/my-account') }}">My Account</a>
                 </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
