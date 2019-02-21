@@ -7,7 +7,7 @@
         <div class="container text-center   ">
             <img class="mb-4" src="../img/shoe.png" alt="" width="72" height="72">
             <h3 class="text-center">Create A New Product</h3>
-            <form method="POST" action="/products"> 
+            <form method="POST" action="/products" enctype="multipart/form-data"> 
                 @csrf  
                       
                 <div class="form-group">
@@ -21,11 +21,9 @@
                 </div>
                 
                 <hr>
-        
-                <div class="form-group">
-                    <input class="form-control {{ $errors->has('imgpath') ? ' alert-danger' : '' }}" type="text" name="imgpath" placeholder="img/(product you are creating)" value="{{ old('imgpath') }}" required>
-                </div>
-        
+                <div class="form-group ">
+                    <input type="file" class="form-control {{ $errors->has('imgpath') ? ' alert-danger' : '' }}" name="img"/>
+                </div>        
                 <hr>
 
                 <div class="form-group">
@@ -38,6 +36,15 @@
                         <option>Left</option>
                         <option>Right</option>
                         <option>Whole Pair</option> 
+                    </select>
+                </div>
+
+                <hr>
+                
+                <div class="form-group {{ $errors->has('gender') ? ' alert-danger' : '' }}">
+                    <select class="form-control" id="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
                     </select>
                 </div>
 

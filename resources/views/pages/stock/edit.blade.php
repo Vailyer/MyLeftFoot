@@ -43,6 +43,15 @@
 
                 <hr>
 
+                <div class="form-group {{ $errors->has('gender') ? ' alert-danger' : '' }}">
+                    <select class="form-control" id="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <hr>
+
                 <div class="form-group">
                     <input class="form-control {{ $errors->has('size') ? ' alert-danger' : '' }}" type="number" name="size" placeholder="Shoe size (UK)" value="{{ $product->size }}" required>
                 </div>

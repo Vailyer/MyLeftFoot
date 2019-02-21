@@ -124,7 +124,6 @@ h6 {
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),  url('../img/malefemale.jpeg');
   background-repeat: no-repeat;
@@ -149,7 +148,6 @@ header.masthead .masthead-content .masthead-subheading {
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(10rem + 55px);
     padding-bottom: 10rem;
   }
   header.masthead .masthead-content .masthead-heading {

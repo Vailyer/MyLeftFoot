@@ -29,7 +29,7 @@
                 <a class="btn btn-primary btn-xl rounded-pill mt-5"  href="/products">Find a new shoe in your size!</a>
             </div>    
             <div class="text-center">
-                <a class="btn btn-primary btn-xl rounded-pill mt-5"  href="/sell">Sell your odd shoes!</a>
+                <a class="btn btn-primary btn-xl rounded-pill mt-5"  href="/products/create">Sell your odd shoes!</a>
             </div>
         </div>
       </div>

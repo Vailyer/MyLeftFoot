@@ -11,13 +11,16 @@
             <hr>
             <div class="content">{{ $product->productDesc }}</div>
             <hr>
-            <img class="card-img-top" src="../../img/{{ $product->imgpath }}" alt="Card image cap">
+            <img class="card-img-top" src="{{ asset('/img/' . $product->imgurl) }}" alt="Card image cap">
             <hr>
             <div class="content"><h4 class="text-center">Product Price:</h4></div>
             <div class="content">{{ $product->price }}</div>
             <hr>
             <div class="content"><h4 class="text-center">Product Foot:</h4></div>
             <div class="content">{{ $product->foot }}</div>
+            <hr>
+            <div class="content"><h4 class="text-center">Product Gender:</h4></div>
+            <div class="content">{{ $product->gender }}</div>
             <hr>
             <div class="content"><h4 class="text-center">Product Size:</h4></div>
             <div class="content">{{ $product->size }}</div>

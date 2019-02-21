@@ -18,10 +18,11 @@ class CreateProductsTable extends Migration
             $table->string('productName');
             $table->text('productDesc');
             $table->integer('price');
-            $table->string('imgpath');
+            $table->string('imgurl');
             $table->string('foot');
             $table->integer('size');
             $table->string('colour');
+            $table->string('gender');
             $table->string('brand');
             $table->string('style');
             $table->integer('userid')->unsigned();

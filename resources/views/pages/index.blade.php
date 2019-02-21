@@ -24,7 +24,7 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h2 class="display-4">How many shoes thrown away...</h2>
+            <h3 class="display-4">How many shoes thrown away...</h2>
             <p>Having different sized feet can be a nightmare. My Left Foot is a marketplace for people to buy and sell odd shoes!</p>
           </div>
         </div>
@@ -42,8 +42,8 @@
         </div>
         <div class="col-lg-6">
           <div class="p-5">
-            <h2 class="display-4">We salute you!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <h3 class="display-4">Stop throwing out your old odd shoes!</h2>
+            <p>With no fee until after you a completed purchase from a buyer theres nothing to lose!</p>
           </div>
         </div>
       </div>
@@ -60,8 +60,9 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h2 class="display-4">Let there be rock!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <h3 class="display-4">A Startup from Cornwall England</h2>
+            <p>To find out more about My Left Foot, what it stands for and how it was founded:</p>
+            <a href="/about-us" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
           </div>
         </div>
       </div>

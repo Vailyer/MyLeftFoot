@@ -69,7 +69,7 @@
                 <li><a href="/register">Register</a></li>
                 <li><a href="/tos">Terms and conditions #TODO</a></li>
                 <li><a href="/privacy">Privacy Policy #TODO</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about-us">About Us</a></li>
               </ul>
               <!--footer_ul_amrc ends here-->
             </div>

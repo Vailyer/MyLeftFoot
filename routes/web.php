@@ -16,14 +16,12 @@ Route::get('getting-started', 'HomeController@gettingStarted');
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('contact', 'ContactController@showContact');
-Route::get('my-account', 'AccountController@index');
+Route::get('/my-account', 'AccountController@index'); 
+Route::put('/my-account/update', 'AccountController@update')->name('my-account/update');
 Route::post('contact', 'ContactController@sendMail');
 
 Route::resource('products', 'ProductController')->middleware('auth');
-route::get('/products/sneakers', 'ProductController@sneakers')->middleware('auth');
-route::get('/products/dress-shoes', 'ProductController@dress')->middleware('auth');
-Route::get('/products/work-shoes', 'ProductController@work')->middleware('auth');
-Route::get('/products/sports-shoes', 'ProductController@sports')->middleware('auth');
+Route::get('/about-us', 'HomeController@about');
 
 Auth::routes(['verify' => true]);
 Auth::routes();

@@ -5,6 +5,7 @@
     <div class="container">
         <h1 class="jumbotron-heading">Marketplace</h1>
         <p class="lead text-muted mb-0">The best place to find new shoes!</p>
+        <div class="container"><a class="btn btn-primary btn-lg rounded-pill mt-5"  href="/products/create">Create New Post</a></div>  
     </div>
 </section>
 
@@ -20,28 +21,19 @@
                     <li class="list-group-item"><a href="{{ url('/products/sports-shoes') }}">Sports Shoes</a></li>
                 </ul>
             </div>
-            <div class="card bg-light mb-3">
-                <div class="card-header bg-success text-white text-uppercase">Last product</div>
-                <div class="card-body">
-                    <img class="img-fluid" src="../../img/malefemale.jpeg" />
-                    <h5 class="card-title">Example product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <p class="bloc_left_price">99.00 $</p>
-                </div>
-            </div>
         </div>
         <div class="col">
             <div class="row">
             @foreach ($products as $product)   
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img class="card-img-top" src="../../img/{{ $product->imgpath }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('/img/' . $product->imgurl) }}" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title"><a href="/products/{{ $product->id}}" title="{{ $product->productName }}">{{ $product->productName }}</a></h4>
                             <p class="card-text">{{ $product->productDesc}}</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">{{ $product->price}}</p>
+                                    <p class="btn btn-danger btn-block">£{{ $product->price}}</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>

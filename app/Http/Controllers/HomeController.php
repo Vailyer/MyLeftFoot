@@ -11,8 +11,8 @@ class HomeController extends Controller
     {
         return view('/pages/getting-started');
     }
-    public function contact()
+    public function about()
     {
-        return view('/pages/contactus');
+        return view('/pages/about-us');
     }
 }
